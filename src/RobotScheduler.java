@@ -148,7 +148,7 @@ public class RobotScheduler implements Tickable {
 				if (targetPos.equals(floor.getChargeLocation())) { // Recharge
 					r.recharge();
 					r.setBusy(false);
-					r.setTarget(targetPos.setLocation((int) targetPos.getX(), (int) targetPos.getY() + 4) //set to arbitrary point away from charge station.
+					r.setTarget(targetPos.setLocation((int) targetPos.getX(), (int) targetPos.getY() + 4)) //set to arbitrary point away from charge station.
 				} else if (targetPos.equals(floor.getPickLocation()) && currentShelfNumber != -1) { // Handle pick area
 					r.setTarget(currentShelfLocation);
 				} else if (targetPos.equals(currentShelfLocation) && currentShelfNumber != -1) { // Handle drop shelf
